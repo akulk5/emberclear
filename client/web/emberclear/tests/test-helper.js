@@ -2,8 +2,8 @@ import Application from '../app';
 import registerWaiter from 'ember-raf-scheduler/test-support/register-waiter';
 import config from '../config/environment';
 import { setApplication } from '@ember/test-helpers';
-import start from 'ember-exam/test-support/start';
-// import { start } from 'ember-qunit';
+// import start from 'ember-exam/test-support/start';
+import { start } from 'ember-qunit';
 import QUnit from 'qunit';
 
 // Install Types and assertion extensions
