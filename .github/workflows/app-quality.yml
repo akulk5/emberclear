@@ -1,4 +1,4 @@
-name: Frontend Quality
+name: App Quality
 on:
   pull_request:
     branches: [master]
@@ -6,8 +6,9 @@ on:
     - 'client/web/emberclear/**'
 
 env:
-  root: client/web
-  app: client/web/emberclear
+  root: client/web/
+  app: emberclear/
+  full: client/web/emberclear/
 
 jobs:
   security:
@@ -43,7 +44,7 @@ jobs:
 
     - name: "JS/TS"
       working-directory: ${{ env.root }}
-      run: yarn eslint ${{ env.addon }} --ext js,ts
+      run: yarn eslint ${{ env.app }} --ext js,ts
 
     - name: "Templates"
       working-directory: ${{ env.root }}
@@ -54,11 +55,11 @@ jobs:
       run: yarn stylelint ${{ env.app }}
 
     - name: "Translations"
-      working-directory: ${{ env.app }}
+      working-directory: ${{ env.full }}
       run: yarn lint:i18n
       continue-on-error: true
 
     - name: 'Type Correctness'
-      working-directory: ${{ env.app }}
+      working-directory: ${{ env.full }}
       run: yarn tsc --skipLibCheck --noEmit
 
