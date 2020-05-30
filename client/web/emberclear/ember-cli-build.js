@@ -13,6 +13,8 @@ const { buildWorkerTrees } = require('./config/build/workers');
 const crypto = require('crypto');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+const PostCSSImport = require('postcss-import');
+
 const { EMBROIDER, CONCAT_STATS } = process.env;
 
 module.exports = function (defaults) {
@@ -71,12 +73,7 @@ module.exports = function (defaults) {
     },
 
     autoImport: {
-      // tweetnacl is required for tests...
-      // TODO: maybe figure out a way to use the actual workers
-      // TODO: maybe split the workers out to a separate package
-      //       so they can be tested separately and then this project
-      //       can test the integration with the workers
-      exclude: isProduction ? ['tweetnacl'] : [],
+      exclude: ['tweetnacl'],
       webpack: {
         plugins: CONCAT_STATS
           ? [
@@ -99,6 +96,11 @@ module.exports = function (defaults) {
     // We don't need to view everything all at once.
     ...addonConfig(env),
     ...buildBabelConfig(env),
+    postcssOptions: {
+      compile: {
+        plugins: [PostCSSImport({ path: ['app/styles'] })],
+      },
+    },
   });
 
   // Additional paths to copy to the public directory in the final build.

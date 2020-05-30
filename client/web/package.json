@@ -21,8 +21,8 @@
   },
   "lint-staged": {
     "*.{ts,js}": "yarn eslint --fix --quiet --cache",
-    "*.hbs": "yarn ember-template-lint",
-    "*.css": "yarn stylelint",
+    "*.hbs": "yarn ember-template-lint --fix",
+    "*.css": "yarn stylelint --fix",
     "translations/*.yml": "yarn ember-intl-analyzer"
   },
   "resolutions": {

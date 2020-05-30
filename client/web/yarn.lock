@@ -8106,7 +8106,7 @@ ember-test-selectors@^4.1.0:
 
 ember-test-waiters@2.1.1, ember-test-waiters@^1.1.1, ember-test-waiters@^2.0.0, ember-test-waiters@^2.1.1:
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/ember-test-waiters/-/ember-test-waiters-2.1.1.tgz#bca50261051938edf77fbef0b14c74c9f800b7ce"
+  resolved "https://registry.npmjs.org/ember-test-waiters/-/ember-test-waiters-2.1.1.tgz#bca50261051938edf77fbef0b14c74c9f800b7ce"
   integrity sha512-OTaiNpgJdKtcjNEniY4T8Xygz8kGszAdeZ8sZ0Gju4UMG7caMXh5AgOcC5DBYoR/RSuLiFHtuMBmquWhRIo2gQ==
   dependencies:
     ember-cli-babel "^7.19.0"
@@ -8231,9 +8231,9 @@ engine.io@~3.4.0:
     engine.io-parser "~2.2.0"
     ws "^7.1.2"
 
-enhanced-resolve@^4.0.0, enhanced-resolve@^4.1.0:
+enhanced-resolve@^4.0.0, enhanced-resolve@^4.1.0, enhanced-resolve@^4.1.1:
   version "4.1.1"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.1.1.tgz#2937e2b8066cd0fe7ce0990a98f0d71a35189f66"
+  resolved "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-4.1.1.tgz#2937e2b8066cd0fe7ce0990a98f0d71a35189f66"
   integrity sha512-98p2zE+rL7/g/DzMHMTF4zZlCgeVdJ7yr6xzEpJRYwFYrGi9ANdn5DnJURg6RpBkyk60XYDnWIv51VfIhfNGuA==
   dependencies:
     graceful-fs "^4.1.2"
