@@ -1,3 +1,4 @@
+name: '@emberclear/ui'
 on:
   pull_request:
     branches: [master]
