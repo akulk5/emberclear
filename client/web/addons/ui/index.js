@@ -1,10 +1,11 @@
 'use strict';
 
-const fs = require('fs');
 const path = require('path');
-const Merge = require('broccoli-merge-trees');
-const mv = require('broccoli-stew').mv;
-const debugTree = require('broccoli-debug').buildDebugCallback('@emberclear/ui')
+
+const PostCSSImport = require('postcss-import');
+const PostCSSNext = require('postcss-cssnext');
+
+const shoelacePath = path.join(__dirname, '..', '..', '..', 'node_modules', 'shoelace-css', 'source', 'css');
 
 module.exports = {
   name: require('./package').name,
@@ -13,17 +14,34 @@ module.exports = {
     return true;
   },
 
-  treeForStyles(tree) {
-    let trees = tree ? [ tree ] : [];
+  included(app) {
+    this._super.included.apply(this, arguments);
 
-    if (this.projectType === 'app') {
-      trees.push(mv(buildStyles(this), 'app/styles'));
+    app.options = app.options || {};
+
+    app.options.postcssOptions = {
+      compile: {
+        enabled: true,
+        extension: 'css',
+        plugins: [
+          PostCSSImport({
+            path: [shoelacePath],
+          }),
+          PostCSSNext({
+            features: {
+              colorFunction: {
+                preserveCustomProps: false,
+              },
+              customProperties: {
+                preserve: true,
+              },
+              rem: false,
+            },
+          }),
+        ],
+      },
     }
-
-    return debugTree(new Merge(trees), 'tree-for-styles');
   }
+
 };
 
-function buildStyles(context) {
-
-}

@@ -2,38 +2,9 @@
 
 // eslint-disable-next-line node/no-unpublished-require
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
-const path = require('path');
-
-const PostCSSImport = require('postcss-import');
-const PostCSSNext = require('postcss-cssnext');
-
-const shoelacePath = path.join(__dirname, '..', '..', '..', 'node_modules', 'shoelace-css', 'source', 'css');
 
 module.exports = function(defaults) {
-  let app = new EmberAddon(defaults, {
-    postcssOptions: {
-      compile: {
-        enabled: true,
-        extension: 'css',
-        plugins: [
-          PostCSSImport({
-            path: [shoelacePath],
-          }),
-          PostCSSNext({
-            features: {
-              colorFunction: {
-                preserveCustomProps: false,
-              },
-              customProperties: {
-                preserve: true,
-              },
-              rem: false,
-            },
-          }),
-        ],
-      },
-    },
-  });
+  let app = new EmberAddon(defaults, {});
 
   /*
     This build file specifies the options for the dummy test app of this
