@@ -62,7 +62,7 @@
     "uuid": "^8.1.0"
   },
   "devDependencies": {
-    "@types/missing": "*",
+    "@emberclear/missing-types": "*",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.1",
     "@babel/plugin-proposal-optional-chaining": "^7.10.1",

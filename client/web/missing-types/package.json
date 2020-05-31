@@ -1,5 +1,5 @@
 {
-  "name": "@types/missing",
+  "name": "@emberclear/missing-types",
   "version": "0.0.0",
   "description": "Missing from either JS packages, or types separated from published code",
   "types": "./types/",
