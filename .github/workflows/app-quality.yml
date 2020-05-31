@@ -47,8 +47,8 @@ jobs:
       run: yarn eslint ${{ env.app }} --ext js,ts
 
     - name: "Templates"
-      working-directory: ${{ env.root }}
-      run: yarn ember-template-lint ${{ env.app }}
+      working-directory: ${{ env.full }}
+      run: yarn ember-template-lint
 
     - name: "Styles"
       working-directory: ${{ env.root }}
