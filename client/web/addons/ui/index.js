@@ -9,10 +9,7 @@ const nodeModules = path.join(__dirname, '..', '..', '..', 'node_modules');
 const addonStyles = path.join(__dirname, 'addon', 'styles');
 
 const importConfig = PostCSSImport({
-  path: [
-    nodeModules,
-    addonStyles,
-  ]
+  path: [nodeModules, addonStyles],
 });
 
 const cssNextConfig = PostCSSNext({
@@ -37,10 +34,7 @@ module.exports = {
   options: {
     postcssOptions: {
       compile: {
-        plugins: [
-          importConfig,
-          cssNextConfig,
-        ],
+        plugins: [importConfig, cssNextConfig],
       },
     },
   },
