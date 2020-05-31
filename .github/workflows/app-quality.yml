@@ -48,7 +48,7 @@ jobs:
 
     - name: "Templates"
       working-directory: ${{ env.full }}
-      run: yarn ember-template-lint
+      run: yarn ember-template-lint .
 
     - name: "Styles"
       working-directory: ${{ env.root }}
