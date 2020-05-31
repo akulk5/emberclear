@@ -82,5 +82,9 @@
       "ember-cli-postcss"
     ],
     "configPath": "tests/dummy/config"
+  },
+  "volta": {
+    "node": "14.3.0",
+    "yarn": "1.22.4"
   }
 }
