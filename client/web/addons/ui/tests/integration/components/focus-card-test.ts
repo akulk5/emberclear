@@ -12,7 +12,7 @@ module('Integration | Component | focus-card', function (hooks) {
 
     await render(hbs`{{focus-card}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent?.trim(), '');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | focus-card', function (hooks) {
       {{/focus-card}}
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent?.trim(), 'template block text');
   });
 });

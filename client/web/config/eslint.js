@@ -21,7 +21,7 @@ module.exports.base = {
   },
 };
 
-module.exports.typescript = {
+module.exports.simpleTypescript = {
   plugins: ['@typescript-eslint'],
   extends: ['plugin:@typescript-eslint/recommended', 'prettier', 'prettier/@typescript-eslint'],
   rules: {
@@ -44,13 +44,21 @@ module.exports.typescript = {
     // @typescript-eslint
     '@typescript-eslint/interface-name-prefix': 'off', // idk
     '@typescript-eslint/no-use-before-define': 'off', // not applicable due to how the runtime is
-    '@typescript-eslint/no-floating-promises': 'error', // doesn't really work with the intent of tasks
     '@typescript-eslint/prefer-optional-chain': 'error', // much concise
 
     // prefer inference
     '@typescript-eslint/explicit-function-return-type': 'off',
 
     'prettier/prettier': 'error',
+  },
+};
+
+module.exports.typescript = {
+  ...module.exports.simpleTypescript,
+  rules: {
+    ...module.exports.simpleTypescript.rules,
+
+    '@typescript-eslint/no-floating-promises': 'error', // doesn't really work with the intent of tasks
   },
 };
 

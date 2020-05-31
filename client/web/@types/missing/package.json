@@ -1,0 +1,19 @@
+{
+  "name": "@types/missing",
+  "version": "0.0.0",
+  "description": "Missing from either JS packages, or types separated from published code",
+  "types": "./types/",
+  "author": "NullVoxPopuli",
+  "license": "GPL-3.0",
+  "private": true,
+  "devDependencies": {
+    "@emberclear/config": "*"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "volta": {
+    "node": "14.3.0",
+    "yarn": "1.22.4"
+  }
+}
