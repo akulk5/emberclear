@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-import { page } from '@emberclear/ui/addon/components/switch/-page';
+import { page } from '@emberclear/ui/components/switch/-page';
 
 module('Integration | Component | switch', function (hooks) {
   setupRenderingTest(hooks);
