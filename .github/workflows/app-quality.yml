@@ -52,7 +52,7 @@ jobs:
 
     - name: "Styles"
       working-directory: ${{ env.root }}
-      run: yarn stylelint ${{ env.app }}
+      run: yarn stylelint ${{ env.app }}/**/*.css
 
     - name: "Translations"
       working-directory: ${{ env.full }}

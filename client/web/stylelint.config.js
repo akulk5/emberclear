@@ -7,14 +7,4 @@ module.exports = {
     'no-descending-specificity': null,
     'value-keyword-case': null,
   },
-  ignoreFiles: [
-    'concat-stats-for/**',
-    'dist/**',
-    'node_modules/**',
-    'public/**',
-    '**/*.hbs',
-    '**/*.js',
-    '**/*.ts',
-    '**/*.html',
-  ],
 };

@@ -22,7 +22,7 @@
   "lint-staged": {
     "*.{ts,js}": "yarn eslint --fix --quiet --cache",
     "*.hbs": "yarn ember-template-lint --fix",
-    "*.css": "yarn stylelint --fix",
+    "*.css": "yarn stylelint --fix --cache",
     "translations/*.yml": "yarn ember-intl-analyzer"
   },
   "resolutions": {
