@@ -1,5 +1,6 @@
 import { triggerKeyEvent } from '@ember/test-helpers';
-import { KeyModifiers } from '@ember/test-helpers/dom/trigger-key-event';
+
+type KeyModifiers = import('@ember/test-helpers/dom/trigger-key-event').KeyModifiers;
 
 export async function keyPressFor(
   selector: string | Element,

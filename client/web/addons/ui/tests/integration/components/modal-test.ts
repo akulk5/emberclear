@@ -3,24 +3,43 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
+import { page } from '@emberclear/ui/addon/components/modal/-page';
+
+import { TestContext } from 'ember-test-helpers';
+
 module('Integration | Component | modal', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  hooks.beforeEach(async function (this: TestContext) {
+    this.setProperties({
+      active: true,
+      close: () => {
+        this.set('active', false);
+      },
+    });
 
-    await render(hbs`{{modal}}`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
     await render(hbs`
-      {{#modal}}
-        template block text
-      {{/modal}}
-    `);
+      <Modal
+        @isActive={{this.active}}
+        @close={{this.close}}
+      >
+        <a href=''>Modal Content</a>
+      </Modal>`);
+  });
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+  test('it renders and pressing escape closes', async function (assert) {
+    assert.equal(page.modalContent.text, 'Modal Content');
+
+    await page.pressEscape();
+
+    assert.equal(page.modalContent.text, '');
+  });
+
+  test('it renders and clicking the backdrop closes', async function (assert) {
+    assert.equal(page.modalContent.text, 'Modal Content');
+
+    await page.backdrop.click();
+
+    assert.equal(page.modalContent.text, '');
   });
 });

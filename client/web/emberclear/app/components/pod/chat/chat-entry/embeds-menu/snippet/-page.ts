@@ -1,7 +1,7 @@
 import { clickable, text, fillable } from 'ember-cli-page-object';
 import { click } from '@ember/test-helpers';
 
-import { definition as modalPage } from 'emberclear/components/modal/-page';
+import { definition as modalPage } from '@emberclear/ui/addon/components/modal/-page';
 
 export const definition = {
   scope: '[data-test-embeds-snippet-modal]',

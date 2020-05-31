@@ -1,5 +1,5 @@
 import { create, clickable } from 'ember-cli-page-object';
-import { keyEvents } from 'emberclear/tests/helpers/pages/-key-events';
+import { keyEvents } from '@emberclear/ui/test-support/key-events';
 
 export const definition = {
   ...keyEvents('[data-test-modal]'),

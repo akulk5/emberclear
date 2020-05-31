@@ -9,7 +9,7 @@ const nodeModules = path.join(__dirname, '..', '..', '..', 'node_modules');
 const addonStyles = path.join(__dirname, 'addon', 'styles');
 
 const importConfig = PostCSSImport({
-  path: [nodeModules, addonStyles],
+  path: ['app/styles', nodeModules, addonStyles],
 });
 
 const cssNextConfig = PostCSSNext({
@@ -27,6 +27,7 @@ const cssNextConfig = PostCSSNext({
 module.exports = {
   name: require('./package').name,
 
+  // override
   isDevelopingAddon() {
     return true;
   },
@@ -43,8 +44,15 @@ module.exports = {
       },
     },
   },
-};
-module.exports.plugins = {
-  cssNext: cssNextConfig,
-  atImport: importConfig,
+
+  included: function (app) {
+    this._super.included.apply(this, arguments);
+
+    app.options = app.options || {};
+    app.options.postcssOptions = {
+      compile: {
+        plugins: [importConfig, cssNextConfig],
+      },
+    };
+  },
 };
