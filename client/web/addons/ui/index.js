@@ -32,10 +32,19 @@ module.exports = {
   },
 
   options: {
+    /**
+     * The addon needs to support PostCSS, but not actually compile any of it.
+     *
+     * This is so that the consuming app can use all the same features.
+     */
     postcssOptions: {
       compile: {
         plugins: [importConfig, cssNextConfig],
       },
     },
   },
+};
+module.exports.plugins = {
+  cssNext: cssNextConfig,
+  atImport: importConfig,
 };

@@ -23,44 +23,7 @@
 @import './defaults';
 @import './shoelace-overrides';
 @import './layout';
-
-:root {
-  --no-select {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  --transition-all {
-    transition: all 0.2s ease-in-out;
-
-    /* transition: all 0.2s cubic-bezier(0.6, 0, 0.735, 0.045); */
-  }
-
-  --transition-touch {
-    transition: all 0.1s linear;
-  }
-
-  --button-as-link {
-    height: unset;
-    line-height: unset;
-    text-align: unset;
-    display: unset;
-    border: none;
-    padding: 0;
-    background: none;
-    color: var(--link-color);
-
-    &:hover {
-      background: none;
-      color: var(--link-color-hover);
-    }
-  }
-}
+@import './mixins';
 
 .visually-hidden {
   position: absolute;

@@ -1,38 +1,4 @@
 
-:root {
-  --font-system:
-    -apple-system,
-    system-ui,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Ubuntu,
-    Arial,
-    sans-serif;
-
-  --grid {
-    display: grid;
-    grid-gap: var(--grid-gap);
-  }
-
-  --column-grid {
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: var(--grid-gap);
-  }
-
-  --grid-space-between {
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  --grid-stretch {
-    justify-content: stretch;
-    align-items: center;
-  }
-}
-
 .flex-center {
   display: flex;
   flex-direction: column;

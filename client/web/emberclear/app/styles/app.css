@@ -1,5 +1,4 @@
-/* @import '@emberclear/ui'; */
-
+@import '@emberclear/ui/addon/styles/mixins';
 @import './components/backdrop';
 @import './components/card';
 @import './components/chat-entry';

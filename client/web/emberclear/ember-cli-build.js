@@ -14,6 +14,7 @@ const crypto = require('crypto');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const PostCSSImport = require('postcss-import');
+const PostCSSNext = require('postcss-cssnext');
 
 const { EMBROIDER, CONCAT_STATS } = process.env;
 
@@ -98,7 +99,22 @@ module.exports = function (defaults) {
     ...buildBabelConfig(env),
     postcssOptions: {
       compile: {
-        plugins: [PostCSSImport({ path: ['app/styles'] })],
+        plugins: [
+          // require('@emberclear/ui').plugins.atImport,
+          PostCSSImport({ path: ['app/styles'] }),
+          // require('@emberclear/ui').plugins.cssNext,
+          PostCSSNext({
+            features: {
+              colorFunction: {
+                preserveCustomProps: false,
+              },
+              customProperties: {
+                preserve: true,
+              },
+              rem: false,
+            },
+          }),
+        ],
       },
     },
   });
