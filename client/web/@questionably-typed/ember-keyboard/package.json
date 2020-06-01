@@ -1,0 +1,15 @@
+{
+  "name": "@questionably-typed/ember-keyboard",
+  "version": "0.0.0",
+  "main": "",
+  "types": "index.d.ts",
+  "author": "NullVoxPopuli",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "dependencies": {
+    "@types/ember__object": "*"
+  }
+}

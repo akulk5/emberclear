@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "baseUrl": "../",
+    "experimentalDecorators": true,
+    "typeRoots": ["../"],
+    "paths": {
+      "ember-keyboard": ["ember-keyboard"],
+      "ember-keyboard/*": ["ember-keyboard/*"]
+    },
+    "types": [],
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "files": ["index.d.ts"]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@questionably-typed/ember",
+  "version": "0.0.0",
+  "main": "",
+  "types": "index.d.ts",
+  "author": "NullVoxPopuli",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "volta": {
+    "node": "14.3.0",
+    "yarn": "1.22.4"
+  },
+  "dependencies": {
+    "@types/ember": "*",
+    "@types/ember__test-helpers": "*"
+  }
+}

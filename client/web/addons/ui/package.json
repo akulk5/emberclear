@@ -27,7 +27,7 @@
     "postpublish": "ember ts:clean"
   },
   "dependencies": {
-    "@emberclear/missing-types": "*",
+    "@questionably-typed/all": "*",
     "@fortawesome/ember-fontawesome": "^0.2.1",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",

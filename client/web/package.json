@@ -10,7 +10,7 @@
   "workspaces": [
     "emberclear",
     "smoke-tests",
-    "missing-types",
+    "@questionably-typed/*",
     "config",
     "addons/*",
     "lint/*"
