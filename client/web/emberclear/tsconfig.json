@@ -26,7 +26,7 @@
       "emberclear/tests/*": ["tests/*"],
       "emberclear/config/*": ["config/*"],
       "emberclear/*": ["app/*"],
-      "@emberclear/ui/test-support/*": ["@emberclear/ui/addon-test-support/*"],
+      "@emberclear/ui/test-support/*": ["../addons/ui/addon-test-support/*"],
       "*": ["types/*", "../questionably-typed/*"]
     }
   },
