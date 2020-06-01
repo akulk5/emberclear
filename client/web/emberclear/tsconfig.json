@@ -27,8 +27,8 @@
       "emberclear/config/*": ["config/*"],
       "emberclear/*": ["app/*"],
       "@emberclear/ui/test-support/*": ["@emberclear/ui/addon-test-support/*"],
-      "*": ["types/*"]
+      "*": ["types/*", "../questionably-typed/*"]
     }
   },
-  "include": ["app/**/*", "tests/**/*", "types/**/*"]
+  "include": ["app/**/*", "tests/**/*", "types/**/*", "../questionably-typed/**/*"]
 }
