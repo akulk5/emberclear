@@ -71,7 +71,7 @@ module.exports = function (defaults) {
     },
 
     autoImport: {
-      exclude: ['tweetnacl'],
+      exclude: isProduction ? ['tweetnacl'] : [],
       webpack: {
         plugins: CONCAT_STATS
           ? [

@@ -1,6 +1,6 @@
 import { create } from 'ember-cli-page-object';
 
-import { inputDefinition } from '@emberclear/ui/addon/components/switch/-page';
+import { inputDefinition } from '@emberclear/ui/components/switch/-page';
 
 export const definition = {
   scope: '[data-test-interface]',
