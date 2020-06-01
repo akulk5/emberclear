@@ -6,6 +6,8 @@
   data-test-dropdown
   class='
     dropdown
+    {{if (eq @dir 'up') 'dropdown-top'}}
+    {{if (eq @dir 'left') 'dropdown-left'}}
     {{if this.isOpen 'active'}}
   '
   ...attributes
