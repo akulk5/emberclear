@@ -3,19 +3,18 @@
   ...attributes
   class='button-link'
   data-test-user-dropdown
-  as |close|
 >
   <:trigger as |toggle|>
     <button
       type='button'
-      class='dropdown-trigger'
+      class='dropdown-trigger hide-xs-down button-link'
       {{on 'click' toggle}}
     >
       {{this.currentUser.name}}
     </button>
   </:trigger>
 
-  <:content>
+  <:content as |close|>
     <div class='user-dropdown-content'>
       <section>
         <strong>{{this.currentUser.name}}</strong>

@@ -2,7 +2,6 @@
   @dir={{'up'}}
   class='button-secondary'
   data-test-chat-options-dropdown
-  as |closeMenu|
 >
   <:trigger as |toggle|>
    <button
@@ -15,7 +14,7 @@
     </button>
   </:trigger>
 
-  <:content>
+  <:content as |closeMenu|>
     <ModalStatic @name='code-or-snippet' as |_isActive actions|>
       <button
         type='button'
