@@ -3,12 +3,16 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-import { page } from '@emberclear/ui/components/modal/-page';
+import { modal } from '@emberclear/ui/test-support/page-objects';
 
 import { TestContext } from 'ember-test-helpers';
+import { create } from 'ember-cli-page-object';
+
 
 module('Integration | Component | modal', function (hooks) {
   setupRenderingTest(hooks);
+
+  let page = create(modal);
 
   hooks.beforeEach(async function (this: TestContext) {
     this.setProperties({

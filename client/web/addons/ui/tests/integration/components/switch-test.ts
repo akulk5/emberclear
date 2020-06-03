@@ -2,11 +2,14 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import { create } from 'ember-cli-page-object';
 
-import { page } from '@emberclear/ui/components/switch/-page';
+import { switch } from '@emberclear/ui/test-support/page-objects';
 
 module('Integration | Component | switch', function (hooks) {
   setupRenderingTest(hooks);
+
+  let page = create(switch);
 
   test('it renders', async function (assert) {
     await render(hbs`<Switch @label='test' />`);

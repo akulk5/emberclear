@@ -2,11 +2,6 @@ import { text, clickable, property } from 'ember-cli-page-object';
 
 import { keyEvents } from './key-events';
 
-export const switchInput = {
-  isChecked: property('checked'),
-  check: clickable(),
-};
-
 export const switch = {
   scope: '.switch',
 
@@ -16,6 +11,10 @@ export const switch = {
   check: clickable('input'),
 };
 
+export const switchInput = {
+  isChecked: property('checked'),
+  check: clickable(),
+};
 
 export const modal = {
   ...keyEvents('[data-test-modal]'),
